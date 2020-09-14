@@ -62,3 +62,9 @@ alias free='free -h'
 
 # virtualenvwrapper
 #source ~/.local/bin/virtualenvwrapper.sh
+
+if which tmux 2>&1 >/dev/null; then
+    if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ] && [ -z "$TMUX" ]; then
+        tmux attach -t tiger || tmux new -s tiger; exit
+    fi
+fi
