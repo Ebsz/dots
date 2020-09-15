@@ -36,6 +36,7 @@ key_repeat_rate=25
 
 xset r rate $key_repeat_delay $key_repeat_rate
 
+setxkbmap no
 
 # wallpaper
 nitrogen --restore &
