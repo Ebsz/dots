@@ -27,44 +27,82 @@
 !*color14:      #66cccc
 !*color15:      #f2f0ec
 
-
+! BASE-16: Atelier ()
 ! special
-*.foreground: #93a1a1
-*.background: #141c21
-*.cursorColor: #afbfbf
+!*.foreground:   #a6a28c
+!*.background:   #20201d
+!*.cursorColor:  #a6a28c
+!
+!! black
+!*.color0:       #20201d
+!*.color8:       #7d7a68
+!
+!! red
+!*.color1:       #d73737
+!*.color9:       #d73737
+!
+!! green
+!*.color2:       #60ac39
+!*.color10:      #60ac39
+!
+!! yellow
+!*.color3:       #cfb017
+!*.color11:      #cfb017
+!
+!! blue
+!*.color4:       #6684e1
+!*.color12:      #6684e1
+!
+!! magenta
+!*.color5:       #b854d4
+!*.color13:      #b854d4
+!
+!! cyan
+!*.color6:       #1fad83
+!*.color14:      #1fad83
+!
+!! white
+!*.color7:       #a6a28c
+!*.color15:      #fefbec
+
+
+! NEON
+! special
+*.foreground:   #f8f8f8
+*.background:   #1f1f1f
+*.cursorColor:  #f8f8f8
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0:       #1f1f1f
+*.color8:       #38252c
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1:       #d81765
+*.color9:       #ff0000
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2:       #97d01a
+*.color10:      #76b639
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3:       #ffa800
+*.color11:      #e1a126
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4:       #16b1fb
+*.color12:      #289cd5
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5:       #ff2491
+*.color13:      #ff2491
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6:       #0fdcb6
+*.color14:      #0a9b81
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
-
+*.color7:       #ebebeb
+*.color15:      #f8f8f8
 
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
