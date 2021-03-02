@@ -1,0 +1,18 @@
+# overrides the default git aliases in zsh
+alias gl='git log --pretty=oneline'
+alias gap='git add -p'
+alias gs='git status'
+
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+
+alias free='free -h'
+alias lsd="lsd --icon never"
+alias up='ping 1.1.1.1'
+
+alias r='ranger'
+
+alias wb='west build --pristine'
+alias wf='west flash'
+
+alias sp='spotifyd'
+alias ksp='killall spotifyd'
