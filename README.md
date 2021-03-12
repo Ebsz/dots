@@ -1,5 +1,5 @@
 # dots
-My personal dotfiles for i3/polybar/.
+My personal dotfiles.
 
 
 ## Setup
