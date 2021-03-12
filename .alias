@@ -9,6 +9,8 @@ alias cfgs='cfg status'
 alias cfga='cfg add'
 alias cfgap='cfg add -p'
 alias cfgl='cfg log --pretty=oneline'
+alias cfgd='cfg diff'
+alias cfgds='cfg diff --staged'
 
 alias free='free -h'
 alias lsd="lsd --icon never"

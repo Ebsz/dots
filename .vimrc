@@ -1,3 +1,11 @@
+" TODO: automatically install of plug, ref. https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+" plugins
+call plug#begin("~/.vim/plugs")
+
+Plug  'sheerun/vim-polyglot'
+
+call plug#end()
+
 set nocompatible " just in case
 syntax on
 set path+=** "" unlock the fuzzy finder
@@ -65,11 +73,3 @@ inoremap {}     {}
 cnoreabbrev W w
 cnoreabbrev Q q
 
-
-" TODO: automatically install of plug, ref. https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-" plugins
-call plug#begin("~/.vim/plugs")
-
-Plug  'sheerun/vim-polyglot'
-
-call plug#end()
