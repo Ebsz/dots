@@ -119,12 +119,11 @@
 ! alternative font settings with 'terminus':
 !URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 !URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
-
 !URxvt.font:                       xft:Terminess (TTF) Nerd Font Complete Mono:size=10
-
 !URxvt.font:                       xft:TerminessTTFNerdFontMono:regular:size=15
 
 URxvt.font:                       xft:xos4 Terminus:size=10
+!URxvt.font:                       xft:xos4 Terminess Powerline:regular:size=10
 
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false

@@ -1,9 +1,14 @@
 # overrides the default git aliases in zsh
-alias gl='git log --pretty=oneline'
-alias gap='git add -p'
 alias gs='git status'
+alias gap='git add -p'
+alias gl='git log --pretty=oneline'
 
+# configuration file aliases
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias cfgs='cfg status'
+alias cfga='cfg add'
+alias cfgap='cfg add -p'
+alias cfgl='cfg log --pretty=oneline'
 
 alias free='free -h'
 alias lsd="lsd --icon never"
@@ -16,3 +21,4 @@ alias wf='west flash'
 
 alias sp='spotifyd'
 alias ksp='killall spotifyd'
+
