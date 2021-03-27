@@ -24,3 +24,4 @@ alias wf='west flash'
 alias sp='spotifyd'
 alias ksp='killall spotifyd'
 
+alias ka='killall'
