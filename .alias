@@ -25,3 +25,5 @@ alias sp='spotifyd'
 alias ksp='killall spotifyd'
 
 alias ka='killall'
+
+alias tmux='tmux new -s $(~/.scripts/animal.py)'
