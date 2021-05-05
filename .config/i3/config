@@ -16,28 +16,38 @@ floating_modifier $mod
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-#
+# *** compositor ***
 exec --no-startup-id picom -b
 
-# tray applets
+# *** tray applets ***
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id mullvad-vpn
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# --- Scratchpad ---
-#for_window [instance="dropdown"] floating enable
-#for_window [instance="dropdown"] resize set 625 500
-#for_window [instance="dropdown"] move scratchpad
-#for_window [instance="dropdown"] border pixel 5
-#exec --no-startup-id alacritty --title "dropdown"
+
+# *** Scratchpad ***
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 725 500
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 5
+
+#exec--no-startup-id alacritty --class "dropdown" -e tmux
+exec_always --no-startup-id alacritty --class "dropdown" -e tmux
+
+bindsym $mod+u     [instance="dropdown"] scratchpad show, move position center
 
 
-# Border size - disable window titles
+#  *** Borders ***
+# disables window titles
 for_window [class="^.*"] border pixel 1
+
+# dropdown window has a thicker border for visibility
+for_window [instance="dropdown"] border pixel 5
+
 
 # -------------------- / color / --------------------
 
@@ -84,8 +94,6 @@ bindsym $mod+d      exec "rofi -show run"
 
 bindsym $mod+x      exec i3lock
 
-#scratchpad
-#bindsym $mod+u     [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center 
 
 # kill focused window
 bindsym $mod+Shift+q kill
