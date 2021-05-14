@@ -1,3 +1,5 @@
+alias vim='nvim'
+
 # overrides the default git aliases in zsh
 alias gs='git status'
 alias gap='git add -p'
@@ -26,4 +28,5 @@ alias ksp='killall spotifyd'
 
 alias ka='killall'
 
-alias tmux='tmux new -s $(~/.scripts/animal.py)'
+alias tn='tmux new -s $(~/.scripts/animal.py)'
+
