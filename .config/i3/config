@@ -36,7 +36,7 @@ for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 
 #exec--no-startup-id alacritty --class "dropdown" -e tmux
-exec_always --no-startup-id alacritty --class "dropdown" -e tmux
+exec_always --no-startup-id alacritty --class "dropdown" -e tmux new-session -A -s scratch
 
 bindsym $mod+u     [instance="dropdown"] scratchpad show, move position center
 
