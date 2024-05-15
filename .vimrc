@@ -1,12 +1,33 @@
-" TODO: automatically install of plug, ref. https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-" plugins
+" just in case
+set nocompatible
+
+" --------- plugins --------- "
+" Make sure plug is installed; if not, install it
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
 call plug#begin("~/.vim/plugs")
+" install with :PlugInstall
 
-Plug  'sheerun/vim-polyglot'
+Plug    'sheerun/vim-polyglot'
+Plug    'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug    'junegunn/fzf.vim'
 
+Plug    'lambdalisue/fern.vim'
+Plug    'antoinemadec/FixCursorHold.nvim' " fern fix for nvim
+
+" override the default svelte plugin in polyglot, which doesn't work as well as this one
+Plug    'evanleck/vim-svelte', {'branch' : 'main'}
+
+Plug    'tpope/vim-fugitive'
 call plug#end()
 
-set nocompatible " just in case
+" ---------------------------- "
+
 syntax on
 set path+=** "" unlock the fuzzy finder
 
@@ -50,8 +71,6 @@ set linebreak
 set hlsearch
 set incsearch
 
-" Enter to remove highlighting
-nnoremap <CR> :nohlsearch<CR><CR>
 
 " Tab movement
 nmap <Tab> :tabn<CR>
@@ -63,6 +82,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-s> :Rg<CR>
+
+" Enter to remove highlighting
+nnoremap <CR> :nohlsearch<CR><CR>
+
 " Bracket autocompletion
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -72,4 +98,3 @@ inoremap {}     {}
 " map upper to lower for those sticky shift-key moments
 cnoreabbrev W w
 cnoreabbrev Q q
-
