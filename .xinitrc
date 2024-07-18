@@ -32,8 +32,7 @@ fi
 
 # adjust key repeat delay and rate
 key_repeat_delay=200
-key_repeat_rate=25
-
+key_repeat_rate=30
 xset r rate $key_repeat_delay $key_repeat_rate
 
 # disable beep

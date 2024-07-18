@@ -38,16 +38,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
+#ZSH_TMUX_AUTOSTART=true
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -64,6 +66,9 @@ source ~/.alias
 
 # virtualenvwrapper
 #source ~/.local/bin/virtualenvwrapper.sh
+
+# required by NVM, tool that manages the use of multiple node.js versions
+# source /usr/share/nvm/init-nvm.sh
 
 #if which tmux 2>&1 >/dev/null; then
 #    if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ] && [ -z "$TMUX" ]; then

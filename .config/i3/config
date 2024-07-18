@@ -5,7 +5,9 @@
 # Font for window titles - not in use, but it's a mandatory option
 font pango:monospace 8
 
-#  Mod4 = windows key
+# *** Modifier ***
+#   Mod4 = windows key
+#   Mod1 = alt
 set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -92,7 +94,7 @@ bindsym $mod+Return exec alacritty
 
 bindsym $mod+d      exec "rofi -show run"
 
-bindsym $mod+x      exec i3lock
+bindsym $mod+x      exec "i3lock -c 000000"
 
 
 # kill focused window
@@ -122,9 +124,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split horizontal
+# split horizontally and vertically
 bindsym $mod+h split h
-# split vertical
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle

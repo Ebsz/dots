@@ -85,6 +85,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-s> :Rg<CR>
+nnoremap <silent> <C-b> :Buf<CR>
 
 " Enter to remove highlighting
 nnoremap <CR> :nohlsearch<CR><CR>
