@@ -10,20 +10,38 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 
+let g:polyglot_disabled = ["rust"]
 call plug#begin("~/.vim/plugs")
 " install with :PlugInstall
 
 Plug    'sheerun/vim-polyglot'
 Plug    'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug    'junegunn/fzf.vim'
+Plug    'pedrohdz/vim-yaml-folds'
 
 Plug    'lambdalisue/fern.vim'
 Plug    'antoinemadec/FixCursorHold.nvim' " fern fix for nvim
+Plug    'wuelnerdotexe/vim-astro'
+Plug    'gmoe/vim-faust'
+Plug    'Julian/lean.nvim'
 
 " override the default svelte plugin in polyglot, which doesn't work as well as this one
-Plug    'evanleck/vim-svelte', {'branch' : 'main'}
+"Plug    'evanleck/vim-svelte', {'branch' : 'main'}
+
+"Plug    'mrcjkb/haskell-tools.nvim'
 
 Plug    'tpope/vim-fugitive'
+
+Plug    'rust-lang/rust.vim'
+
+
+"""""""""" DAP SERVER """"""""
+Plug    'mfussenegger/nvim-dap'
+Plug    'abayomi185/nvim-dap-probe-rs'
+
+Plug    'nvim-neotest/nvim-nio'
+Plug    'rcarriga/nvim-dap-ui'
+
 call plug#end()
 
 " ---------------------------- "
@@ -99,3 +117,7 @@ inoremap {}     {}
 " map upper to lower for those sticky shift-key moments
 cnoreabbrev W w
 cnoreabbrev Q q
+
+command! E Explore
+
+colorscheme retrobox
