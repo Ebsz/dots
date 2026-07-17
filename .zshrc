@@ -64,9 +64,6 @@ export LESS=-r
 
 source ~/.alias
 
-# virtualenvwrapper
-#source ~/.local/bin/virtualenvwrapper.sh
-
 # required by NVM, tool that manages the use of multiple node.js versions
 # source /usr/share/nvm/init-nvm.sh
 
@@ -80,3 +77,8 @@ export PATH=~/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# virtualenvwrapper
+source /usr/bin/virtualenvwrapper.sh
+
+export KUBECONFIG="/home/einar/.kube/config"
