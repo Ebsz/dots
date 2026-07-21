@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-killall -q polybar
+# Stop all running polybar instances
+polybar-msg cmd quit
 
-# launch polybar
-polybar ishinohana
 
+polybar ishinohana 2>&1 | tee -a /tmp/polybar.log & disown
